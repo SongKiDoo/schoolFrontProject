@@ -1,0 +1,122 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 100px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+.header-wrapper {
+  width: 650px;
+  z-index: 9;
+  text-align: center;
+  position: absolute;
+  left: -999px;
+  right: -999px;
+  margin: 0 auto;
+}
+
+
+/* 검색 흰배경 영역 */
+.inputSearchBar {
+  width: 100%;
+  height: 3em;
+  /*position: absolute;*/
+  display: inline-block !important;
+  background-color: #ffffff !important;
+  z-index: 1;
+}
+
+/* 검색 텍스트 영역 */
+.inputSearchBar .textArea {
+  width: 600px;
+  float: left;
+  line-height: 3;
+  text-align: left;
+  color: black;
+  padding-left: 1em;
+  overflow: hidden;
+  white-space:nowrap;
+  /*text-overflow:ellipsis;*/
+}
+
+.inputSearchBar .textArea:focus {
+  color: red;
+
+}
+
+/* 검색 돋보기 버튼 */
+.inputSearchBar .searchButton {
+  width: 2em;
+  float: right;
+  line-height: 3;
+  text-align: left;
+  color: black;
+
+}
+
+/* 검색창 깜박임 처리 */
+.inputSearchBar .blink {
+  content: "";
+  width: 3px;
+  height: 1em;
+  padding: 0;
+  margin-top: 1em;
+  margin-left: 2px;
+  /* 애니메이션 2.5초 반복 */
+  -webkit-animation: blink 2.5s linear infinite;
+}
+@-webkit-keyframes blink {
+  0% { background-color: #FFFFFF; }
+  100% { background-color: green; }
+}
