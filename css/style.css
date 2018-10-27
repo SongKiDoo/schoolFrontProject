@@ -23,23 +23,25 @@ p {
   min-height: 380px;
   line-height: 0;
   height: auto;
-  color: rgba(255,255,255,.9);
+  color: rgba(255, 255, 255, .9);
 }
-  .parallax-container .section {
-    width: 100%;
-  }
 
-@media only screen and (max-width : 992px) {
+.parallax-container .section {
+  width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
   .parallax-container .section {
     position: absolute;
     top: 40%;
   }
+
   #index-banner .section {
     top: 10%;
   }
 }
 
-@media only screen and (max-width : 100px) {
+@media only screen and (max-width: 600px) {
   #index-banner .section {
     top: 0;
   }
@@ -48,12 +50,17 @@ p {
 .icon-block {
   padding: 0 15px;
 }
+
 .icon-block .material-icons {
   font-size: inherit;
 }
 
 footer.page-footer {
   margin: 0;
+}
+
+.margin-b50 {
+  margin-bottom: 50px;
 }
 
 .header-wrapper {
@@ -65,7 +72,6 @@ footer.page-footer {
   right: -999px;
   margin: 0 auto;
 }
-
 
 /* 검색 흰배경 영역 */
 .inputSearchBar {
@@ -86,7 +92,7 @@ footer.page-footer {
   color: black;
   padding-left: 1em;
   overflow: hidden;
-  white-space:nowrap;
+  white-space: nowrap;
   /*text-overflow:ellipsis;*/
 }
 
@@ -102,12 +108,12 @@ footer.page-footer {
   line-height: 3;
   text-align: left;
   color: black;
+  cursor: pointer;
 
 }
 
 /* 검색창 깜박임 처리 */
-.inputSearchBar .blink {
-  content: "";
+.blink {
   width: 3px;
   height: 1em;
   padding: 0;
@@ -116,7 +122,61 @@ footer.page-footer {
   /* 애니메이션 2.5초 반복 */
   -webkit-animation: blink 2.5s linear infinite;
 }
+
 @-webkit-keyframes blink {
-  0% { background-color: #FFFFFF; }
-  100% { background-color: green; }
+  0% {
+    background-color: #FFFFFF;
+  }
+  100% {
+    background-color: green;
+  }
 }
+
+/* 마켓 카테고리 영역 */
+.categoryContainer {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+
+  padding-top: 1em;
+  /*text-align: center;*/
+  /*padding-left: 4em;*/
+  /* 원형 처리 */
+  border-radius: 7.5em;
+
+  /* 기존 영역 덮어씌우도록 처리 */
+  bottom: 3em;
+  position: relative;
+
+  height: 6em;
+  /*background-color: #d81b60;*/
+  background-color: #FFFFFF;
+  margin-bottom: 0;
+}
+
+/* 마켓 카테고리 ul */
+.categoryContainer .categoryUl {
+  list-style: none;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 마켓 카테고리 컨텐츠 */
+.categoryContainer ul li {
+  float: left;
+  /* 영역당 10% */
+  width: 10%;
+  text-align: center;
+  /* 컨텐츠 가로 정렬 */
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* 마켓 카테고리 컨텐츠 margin */
+.categoryContainer ul li div {
+  margin-bottom: 0.5em;
+}
+
+
+
