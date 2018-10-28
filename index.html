@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
           integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css"/>
+
 </head>
 <body>
 <nav class="white" role="navigation">
@@ -151,12 +154,17 @@
             <h5 class="categoryHeadName"> 자동차 카테고리</h5>
             <div class="dCateArrowDiv">
                 <div> <i class="fas fa-chevron-left"></i></div>
+                <!--<button class="slick-next slick-arrow" aria-label="Next" type="button" style="display: block;" aria-disabled="false">Next</button>-->
                 <div> <i class="fas fa-chevron-right"></i></div>
             </div>
             <div class="clearBoth"></div>
-            <div class="dCateCardDiv">
-                이미지
-
+            <div class="dCateCardDiv" id="carCate" data-slick='{"slidesToShow": 4, "slidesToScroll": 1}'>
+                <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaH0YZlOXidJaybo7NdVzmE4eGO9JwBorBRqiuIOWPYK0RHOqT"></div>
+                <div><img src="https://www.daimler.com/bilder/konzern/tradition/die-entstehung-des-markennamens-mercedes-benz/geschichte-des-mercedes-benz-sterns/2001dig410-w385xh0.jpg"></div>
+                <div><h3>3</h3></div>
+                <div><h3>4</h3></div>
+                <div><h3>5</h3></div>
+                <div><h3>6</h3></div>
             </div>
 
         </div>
@@ -302,6 +310,8 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="js/materialize.js"></script>
 <script src="js/init.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
+<script type="text/javascript" src="js/slick-custom.js"/>
 
 </body>
 </html>
