@@ -239,14 +239,8 @@ footer.page-footer {
 
 /* 상세카테고리 카드Item */
 .dCateCardDiv div {
-    /*width: 200px;*/
-    /*height: 150px;*/
-    /*display: inline-block;*/
     position: relative;
-    /*padding-right: 50px;*/
     margin: auto;
-    /*overflow: hidden;*/
-
 }
 
 /* 상세카테고리 이미지 */
@@ -293,28 +287,29 @@ footer.page-footer {
 
 /* 카드박스 영역 */
 .cardBox {
-    /*float: left;*/
-    /*position: relative;*/
-    /*display: inline-block !important;*/
     width: 250px;
     height: 350px;
     margin: auto;
     text-align: center;
-    background-color: #ffffff;
     border-radius: 1em;
     z-index: 99;
     overflow: hidden;
-    opacity: 0.8;
-
 }
 
+/* 카드박스 헤더 영역 */
 .cardBox .cardBoxHead {
     width: 100%;
     height: 20%;
-    background-color: #5a5a5a;
     line-height: 4em;
+    background-color: #9e9e9e;
+    opacity: 0.8;
 }
 
+.cardBoxHead:hover {
+    opacity: 1;
+}
+
+/* 카드박스 리스트 내용 영역*/
 .cardBox .cardBoxContent {
     width: 100%;
     height: 80%;
@@ -323,30 +318,86 @@ footer.page-footer {
     overflow: auto;
     flex-direction: column;
     line-height: 4em;
+    cursor: pointer;
 }
 
+/* 카드박스 리스트 아이템 영역 */
 .cardBoxContent .cardBoxItem {
-    color: red;
     width: 100%;
     height: 33%;
     display: flex;
     flex-wrap: nowrap;
+    background-color: #ffffff;
+    opacity: 0.8;
 }
 
-.cardBoxItem .im {
-    width: 40%;
-    flex-grow: 1;
-    color: blue
+.cardBoxItem:hover {
+    opacity: 1;
 }
 
-.cardBoxItem .co {
+
+.cardBoxItem .content {
     width: 100%;
     flex-grow: 3;
 }
-    /* float  제거  */
-.clearBoth {
-    clear: both;
+
+/* 박스아이템 브랜드명 */
+.cardBoxItem .content h5 {
+    font-size: 0.8em;
+    color: #5a5a5a;
+    font-weight: bold;
+    /*margin: 0.3em;*/
+    /*margin-top: 0.4em;*/
+    padding-top: 0.1em;
 }
+
+/* 박스아이템 상품명 */
+.cardBoxItem .content h4 {
+    font-size: 0.8em;
+    color: #5a5a5a;
+    /*font-weight: bold;*/
+    margin: 0.1em;
+    padding: 0.1em;
+}
+
+/* 박스아이템 가격 */
+.cardBoxItem .content p {
+    margin-top: 0.1em;
+    font-size: 1em;
+    color: #5a5a5a;
+}
+
+/* 이미지 내 남은 시간 */
+.remainingDateText {
+    position: relative;
+    z-index: 999;
+    bottom: 6em;
+    color: #e51c23;
+    /* hover시에만 보이도록 hidden 처리 */
+    visibility: hidden;
+}
+
+/* 카드박스 이미지 영역 */
+.cardBoxItem .imgDiv {
+    width: 40%;
+    flex-grow: 1;
+}
+
+/* 카드박스 이미지 */
+.cardBoxItem .imgDiv .im {
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+/* 카드박스 이미지 hover시 블러처리 */
+.cardBoxItem .imgDiv .im:hover {
+    -webkit-filter: blur(3px);
+    /* 파이어폭스 */
+    filter : blur(3px);
+    transition-duration: 1s;
+}
+
 
 .clearfix:after {
     content: "";

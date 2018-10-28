@@ -1,3 +1,4 @@
+var module;
 (function ($) {
     $(function () {
 
