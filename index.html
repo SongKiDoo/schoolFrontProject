@@ -10,9 +10,10 @@
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
           integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/common.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
 </head>
 <body>
@@ -152,19 +153,73 @@
     <div class="contentContainer">
         <div class="dCateDiv">
             <h5 class="categoryHeadName"> 자동차 카테고리</h5>
-            <div class="dCateArrowDiv">
+            <div class="dCateArrowDiv" id="carCateArrow">
                 <div> <i class="fas fa-chevron-left"></i></div>
                 <!--<button class="slick-next slick-arrow" aria-label="Next" type="button" style="display: block;" aria-disabled="false">Next</button>-->
                 <div> <i class="fas fa-chevron-right"></i></div>
             </div>
             <div class="clearBoth"></div>
-            <div class="dCateCardDiv" id="carCate" data-slick='{"slidesToShow": 4, "slidesToScroll": 1}'>
-                <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaH0YZlOXidJaybo7NdVzmE4eGO9JwBorBRqiuIOWPYK0RHOqT"></div>
-                <div><img src="https://www.daimler.com/bilder/konzern/tradition/die-entstehung-des-markennamens-mercedes-benz/geschichte-des-mercedes-benz-sterns/2001dig410-w385xh0.jpg"></div>
-                <div><h3>3</h3></div>
-                <div><h3>4</h3></div>
-                <div><h3>5</h3></div>
-                <div><h3>6</h3></div>
+            <div class="dCateCardDiv" id="carCate">
+                <div class="dCateCardItem">
+                    <img src="https://www.mobileworld.it/wp-content/uploads/2014/12/Beautiful-Bmw-Logo.jpg">
+                    <span class="dCateContent"> BMW</span>
+                </div>
+                <div class="dCateCardItem">
+                    <img src="https://images.caradisiac.com/logos/5/0/7/6/175076/S0-L-organisme-allemand-KBA-discredite-Mercedes-sur-le-gaz-de-climatisation-90336.jpg">
+                    <span class="dCateContent"> Mercedes-Benz </span>
+                </div>
+                <div class="dCateCardItem">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK-K1JD3Eetiufu8yiNzshj33KoIKF7FeFc-88gGqBmzstpFa6">
+                    <span class="dCateContent"> AUDI</span>
+                </div>
+                <div class="dCateCardItem">
+                    <img src="https://cdni.rt.com/media/pics/2016.11/article/581d758fc36188cf688b45b8.jpg">
+                    <span class="dCateContent"> 기아</span>
+                </div>
+                <div class="dCateCardItem">
+                    <img src="https://st.motortrendenespanol.com/uploads/sites/5/2010/04/2010-hyundai-genesis-coupe-3-8-hyundai-logo.jpg">
+                    <span class="dCateContent"> 현대</span>
+                </div>
+                <div class="dCateCardItem">
+                    <img src="http://carkeymaster.kr/files/attach/images/142/591/002/2d6c9b8e0cf13533e1a9abda71a2c090.jpg">
+                    <span class="dCateContent"> 쌍용</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="dCateDiv">
+            <h5 class="categoryHeadName"> 컴퓨터 카테고리</h5>
+            <div class="dCateArrowDiv" id="computerCateArrow">
+                <div> <i class="fas fa-chevron-left"></i></div>
+                <div> <i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="clearBoth"></div>
+            <div class="dCateCardDiv" id="computerCate">
+                <div class="dCateCardItem">
+                    <img src="https://www.mobileworld.it/wp-content/uploads/2014/12/Beautiful-Bmw-Logo.jpg">
+                    <span class="dCateContent"> BMW</span>
+                </div>
+                <div class="dCateCardItem">
+                    <img src="https://images.caradisiac.com/logos/5/0/7/6/175076/S0-L-organisme-allemand-KBA-discredite-Mercedes-sur-le-gaz-de-climatisation-90336.jpg">
+                    <span class="dCateContent"> Mercedes-Benz </span>
+                </div>
+                <div class="dCateCardItem">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK-K1JD3Eetiufu8yiNzshj33KoIKF7FeFc-88gGqBmzstpFa6">
+                    <span class="dCateContent"> AUDI</span>
+                </div>
+                <div class="dCateCardItem">
+                    <img src="https://cdni.rt.com/media/pics/2016.11/article/581d758fc36188cf688b45b8.jpg">
+                    <span class="dCateContent"> 기아</span>
+                </div>
+                <div class="dCateCardItem">
+                    <img src="https://st.motortrendenespanol.com/uploads/sites/5/2010/04/2010-hyundai-genesis-coupe-3-8-hyundai-logo.jpg">
+                    <span class="dCateContent"> 현대</span>
+                </div>
+                <div class="dCateCardItem">
+                    <img src="http://carkeymaster.kr/files/attach/images/142/591/002/2d6c9b8e0cf13533e1a9abda71a2c090.jpg">
+                    <span class="dCateContent"> 쌍용</span>
+                </div>
             </div>
 
         </div>
