@@ -9,7 +9,7 @@ var module;
         } else {
             var targetOjbect = $('.categoryUl').offset().top;
             $(window).scroll(function () {
-                if ($(document).scrollTop() > targetOjbect + 200) {
+                if ($(document).scrollTop() > targetOjbect + 500) {
                     $('#top-nav').css('display', "block");
                     $('#top-nav').addClass('jbFixed');
                 } else {
