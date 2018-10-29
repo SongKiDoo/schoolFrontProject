@@ -17,17 +17,52 @@
 
 </head>
 <body>
-<nav class="white" role="navigation">
+<nav id="top-nav" class="white" role="navigation">
+    <!--<div class="nav-wrapper container">-->
     <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">Logo</a>
-        <ul class="right hide-on-med-and-down">
-            <li><a href="#">Navbar Link</a></li>
+        <a href="#" class="brand-logo">Logo</a>
+
+        <ul class="left hide-on-med-and-down">
+            <li>
+                <a id="logo-container" href="#" class="pc-brand-logo">Logo</a>
+            </li>
+            <li style="height: 100%">
+                <div class="inputNavSearchBar2">
+                    <span class="textArea"> 검색어를 입력하세요.<span class="blink">&nbsp;</span></span>
+                </div>
+            </li>
+
         </ul>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+        <div class="clearfix"></div>
+        <!--<div style="display: inline-block; position: absolute; bottom: 0; float: right"></div>-->
+
+        <ul class="nav-category-list hide-on-med-and-down">
+            <li><a href="#">자전거</a></li>
+            <li><a href="#">자동차</a></li>
+            <li><a href="#">가방</a></li>
+            <li><a href="#">게임</a></li>
+            <li><a href="#">컴퓨터</a></li>
+            <li><a href="#">스포츠</a></li>
+            <li><a href="#">도서</a></li>
+            <li><a href="#">안경</a></li>
+            <li><a href="#">빌딩</a></li>
+            <li><a href="#">아파트</a></li>
+        </ul>
+
 
         <ul id="nav-mobile" class="sidenav">
             <li><a href="#">Navbar Link</a></li>
         </ul>
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+
+    </div>
+    <div class="row nav-category-list">
+
     </div>
 </nav>
 
@@ -269,9 +304,9 @@
                 </div>-->
     </div>
 
-
+    <div class="no-pad-bot" id="top-menu-point"></div>
     <!--<div class="parallax-container valign-wrapper">-->
-    <div class="parallax-container">
+    <div class="parallax-container" id="card-box-container">
         <div class="section no-pad-bot">
             <div class="contentContainer">
                 <!--<div class="card-wrapper">-->

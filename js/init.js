@@ -2,6 +2,20 @@ var module;
 (function ($) {
     $(function () {
 
+
+        var targetOjbect = $('.categoryUl').offset().top;
+        console.log(targetOjbect)
+        $( window ).scroll( function() {
+            console.log($(document).scrollTop(), targetOjbect);
+            console.log($(document).scrollTop() > targetOjbect);
+            if ($(document).scrollTop() > targetOjbect + 200) {
+                console.log($('#top-nav'))
+                $('#top-nav').addClass('jbFixed');
+            } else {
+                $('#top-nav').removeClass('jbFixed');
+            }
+        });
+
         $('.sidenav').sidenav();
         $('.parallax').parallax();
 

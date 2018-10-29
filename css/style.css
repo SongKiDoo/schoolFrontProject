@@ -11,8 +11,19 @@ nav .brand-logo {
     color: #444;
 }
 
+nav {
+    z-index: 9999;
+}
+
 p {
     line-height: 2rem;
+}
+
+.nav-category-list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    line-height: 6em;
 }
 
 .sidenav-trigger {
@@ -29,8 +40,28 @@ p {
 .parallax-container .section {
     width: 100%;
 }
+@media only screen and (min-width: 993px) {
+    nav {
+        height: 10em;
+    }
 
+
+    nav .brand-logo {
+        display: none;
+    }
+
+    nav .pc-brand-logo {
+        display: inline-block;
+        position: static;
+    }
+
+}
 @media only screen and (max-width: 992px) {
+
+    nav .brand-logo {
+        display: "";
+
+    }
     .parallax-container .section {
         position: absolute;
         top: 40%;
@@ -42,6 +73,10 @@ p {
 }
 
 @media only screen and (max-width: 600px) {
+    nav {
+        height: 64px;
+    }
+
     #index-banner .section {
         top: 0;
     }
@@ -99,10 +134,35 @@ footer.page-footer {
     z-index: 1;
 }
 
+.flex-nav-container {
+    display: flex;
+    align-items: center;
+    align-content: stretch;
+}
+
+.nav-wrapper ul {
+    height: 4em;
+}
+
+.inputNavSearchBar {
+    height: 3em;
+    display: inline-block;
+    line-height: 3em;
+}
+.inputNavSearchBar2 {
+
+    width: 20em;
+    height: 2em;
+    background-color: #2962FF;
+    z-index: 1;
+    margin: auto;
+    vertical-align: middle;
+}
+
 /* 검색 텍스트 영역 */
-.inputSearchBar .textArea {
+.textArea {
     width: 600px;
-    float: left;
+    /*float: left;*/
     line-height: 3;
     text-align: left;
     color: black;
@@ -398,6 +458,10 @@ footer.page-footer {
     transition-duration: 1s;
 }
 
+.jbFixed {
+    position: fixed;
+    top: 0px;
+}
 
 .clearfix:after {
     content: "";
