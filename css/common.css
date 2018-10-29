@@ -1,10 +1,37 @@
 
-
+/* 시그니쳐 컬러 */
 .signatureColor {
     color: #5882FA;
 }
 
+/* html 컨텐츠 글씨 오버 공통 설정 */
 .hover-text {}
 .hover-text:hover {
   color: #5882FA !important;
+}
+
+/* row 마진 50 */
+.margin-b50 {
+    margin-bottom: 50px;
+}
+
+/* 회색 한줄 */
+.line-1 {
+    border-top: 1px solid #E6E6E6;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* 얕은 회색 */
+.little-gray {
+    color : #D8D8D8;
+}
+
+
+.icon-block {
+    padding: 0 15px;
+}
+
+.icon-block .material-icons {
+    font-size: inherit;
 }

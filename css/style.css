@@ -63,6 +63,11 @@ p {
         display: none;
     }
 
+    /* PC 상단 ul 높이 설정 */
+    .nav-wrapper ul {
+        height: 4em;
+    }
+
     /* PC 환경에서만 사용 */
     nav .pc-brand-logo {
         height: 4em;
@@ -121,8 +126,35 @@ p {
         font-size: 2em;
     }
 
+    .nav-profile {
+        display: flex;
+        flex-wrap: nowrap;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    .nav-profile img {
+        width: 64px;
+        height:64px;
+        border-radius: 32px; /* 이미지 반크기만큼 반경을 잡기 */
+    }
+
+    /* 높이 제한 해제 */
+    .parallax-container .section {
+        position: absolute;
+        top: 0%;
+    }
+
+    /* 헤더 상단 메뉴 비노출 */
+    .header-title-wrapper {
+        display: none;
+    }
+
+    /* 헤더 컨텐츠 사이즈 조절 */
     .header-wrapper {
-        width: 30em !important;
+        width: 25em !important;
         font-size: 0.9em;
     }
 
@@ -130,6 +162,26 @@ p {
         top: 0;
     }
 
+
+    /* 카드박스 영역 조절  */
+    #card-box-container {
+        height: 1280px;
+
+    }
+
+    /* 카드박스 영역 조절  */
+    #card-box-content-container {
+        height: 1280px;
+    }
+
+    /* 카드박스 컨텐츠 영역 조절  */
+    .card-wrapper {
+        width: 320px !important;
+        height: 1240px;
+        /* 컨텐츠 세로로 변경 */
+        flex-direction: column;
+
+    }
     /* 모바일환경에서는 화살표 버튼 비노출 */
     .dCateArrowDiv {
         display: none;
@@ -148,35 +200,73 @@ p {
         width: 33% !important;
         padding: 1em;
     }
+
+    /* 푸터 수직으로 변경 */
+    .flew-footer {
+        flex-direction: column;
+    }
+
 }
 
 
-
-.icon-block {
-    padding: 0 15px;
-}
-
-.icon-block .material-icons {
-    font-size: inherit;
-}
-
+/* 푸터 배경 지정 */
 footer.page-footer {
     margin: 0;
     background-color: #ffffff;
 }
 
+/* 푸터 카피라이트 배경 지정 */
 .footer-copyright {
     background-color: #F2F2F2 !important;
 }
 
+/* 푸터 카피라이트 색상 지정 */
 .footer-copyright span {
     color : #6E6E6E;
 }
 
-.margin-b50 {
-    margin-bottom: 50px;
+/* 헤더 로고/로그인 영역 */
+.header-title-wrapper {
+    width: 90%;
+    height: 2em;
+    margin: 0 auto;
+    z-index: 9;
+
 }
 
+/* 로그인/회원가입 영역 */
+.header-title-wrapper .title-log-info-div {
+    float: right;
+    display: inline-block;
+    margin-right: 2em;
+    /*padding: 1em;*/
+}
+
+/* 버튼 색조정 */
+.header-title-wrapper .title-log-info-div button {
+    background-color: #5882FA;
+    margin-right: 1em;
+}
+
+/* 버튼 오버시 색처리 */
+.header-title-wrapper .title-log-info-div button:hover {
+    background-color: #0D47A1;
+}
+
+
+/* 헤더 로고 영역 */
+.header-title-wrapper .title-logo-div {
+    float: left;
+    display: inline-block
+}
+
+/* 헤더 로고 이미지  */
+.header-title-wrapper .title-logo-div img {
+    width: 10em;
+    float: left
+}
+
+/* 메인 컨텐츠 영역 설정 */
 .header-wrapper {
     width: 41em;
     z-index: 9;
@@ -187,20 +277,13 @@ footer.page-footer {
     margin: 0 auto;
 }
 
+/* 카드 컨텐츠 영억 설정 */
 .card-wrapper {
     width: 1000px;
     z-index: 9;
-
     display: flex;
     flex-wrap: nowrap;
-    /*justify-content: space-between;*/
     justify-content: space-around;
-    /*text-align: center;*/
-    /*position: absolute;*/
-    /*left: -999px;*/
-    /*right: -999px;*/
-    /*margin: auto;*/
-    /*padding: auto;*/
 }
 
 /* 검색 흰배경 영역 */
@@ -211,16 +294,6 @@ footer.page-footer {
     display: inline-block !important;
     background-color: #ffffff !important;
     z-index: 1;
-}
-
-.flex-nav-container {
-    display: flex;
-    align-items: center;
-    align-content: stretch;
-}
-
-.nav-wrapper ul {
-    height: 4em;
 }
 
 
@@ -236,12 +309,25 @@ footer.page-footer {
     vertical-align: middle;
 }
 
+/* PC 상단 검색창 영역 */
+.nav-textArea {
+    float: left;
+    text-align: left;
+    padding-left: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    /*text-overflow:ellipsis;*/
+    cursor: pointer;
+    width: 85%;
+}
+
 /* 검색 이미지 버튼 영역  */
 .searchButton-wrapper {
     display: inline-block;
     float: right;
     height: 100%;
-    width: 2em
+    width: 2em;
+    cursor: pointer;
 }
 
 /* 검색 돋보기 버튼 */
@@ -270,18 +356,6 @@ footer.page-footer {
     cursor: pointer;
 }
 
-/* PC 상단 검색창 영역 */
-.nav-textArea {
-    float: left;
-    text-align: left;
-    padding-left: 1em;
-    overflow: hidden;
-    white-space: nowrap;
-    /*text-overflow:ellipsis;*/
-    cursor: pointer;
-    width: 85%;
-}
-
 /* 입력시 글씨색 변경 */
 .textArea:focus {
     color: black !important;
@@ -308,14 +382,6 @@ footer.page-footer {
     -webkit-animation: blink 1.5s linear infinite;
 }
 
-@-webkit-keyframes blink {
-    0% {
-        background-color: #FFFFFF;
-    }
-    100% {
-        background-color: #A4A4A4;
-    }
-}
 
 /* 컨테이너 재정의 */
 .contentContainer {
@@ -347,7 +413,6 @@ footer.page-footer {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    /*align-content: stretch;*/
 }
 
 /* 마켓 카테고리 컨텐츠 */
@@ -361,6 +426,7 @@ footer.page-footer {
     cursor: pointer;
 }
 
+/* 마켓 카테고리 오버시 애니메이션  */
 .categoryWrapper ul li:hover {
     animation-name: logo_event;
     animation-duration:2s;
@@ -371,6 +437,7 @@ footer.page-footer {
 .categoryWrapper ul li div {
     margin-bottom: 0.5em;
 }
+
 
 /* 상세카테고리 영역 */
 .dCateDiv {
@@ -588,6 +655,8 @@ footer.page-footer {
     clear: both;
 }
 
+
+/* 푸터 플렉스 설정 */
 .flew-footer {
     display: flex;
     width: 100%;
@@ -598,11 +667,10 @@ footer.page-footer {
     /*flex-wrap: nowrap;*/
     /*flex-direction: row;*/
 }
-footer {
 
-}
-
+/* 푸터 개발 정보 영역 */
 .footer-info {
+    /* 비율 2로 설정 */
     flex-grow: 2;
     text-align: left;
     color : #6E6E6E;
@@ -610,50 +678,38 @@ footer {
 
 }
 
+/* 앱 다운로드 이미지 */
 .footer-info img {
     width: 180px;
+    height: 51.53px;
+    margin-top: 1em;
     cursor: pointer;
 }
 
+/* 관련사이트 SNS 이미지  */
 .sns-icon img{
     width: 36px;
     margin-right: 0.5em;
     cursor: pointer;
 }
 
+/* SNS 오버시 애니메이션 처리 */
 .sns-icon img:hover{
     animation-name: logo_event;
     animation-duration:2s;
 }
 
-@keyframes logo_event {
-    0% {transform: translate(0);}
-    to {transform: translate(0, -10px);}
-}
 
-
+/* 푸터 일반 아이템 */
 .footer-item {
     flex-grow: 1;
     text-align: left;
     color : #6E6E6E;
     line-height: 2em;
-
-}
-
-.line-1 {
-    border-top: 1px solid #E6E6E6;
-    margin-top: 1em;
-    margin-bottom: 1em;
-
-}
-
-.little-gray {
-    color : #D8D8D8;
 }
 
 .footer-item ul li a {
     color : #6E6E6E;
-
 }
 
 

@@ -8,12 +8,14 @@
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
           integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css"/>
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/animation.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/common.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
 </head>
 <body>
@@ -64,13 +66,39 @@
 
 
         <ul id="nav-mobile" class="sidenav">
-            <li><a href="#">Navbar Link</a></li>
+            <li style="width: 100%; height: 10em">
+                <div class="nav-profile">
+                    <img src="background1.jpg">
+                    <div>
+                        <a class="hover-text" href="#"> 로그인</a>
+                        <a class="hover-text" href="#"> 회원가입</a>
+                    </div>
+                </div>
+
+            </li>
+            <li class="line-1"></li>
+
+            <li><a href="#" class="hover-text">자전거</a></li>
+            <li><a href="#" class="hover-text">자동차</a></li>
+            <li><a href="#" class="hover-text">가방</a></li>
+            <li><a href="#" class="hover-text">게임</a></li>
+            <li><a href="#" class="hover-text">컴퓨터</a></li>
+            <li><a href="#" class="hover-text">스포츠</a></li>
+            <li><a href="#" class="hover-text">도서</a></li>
+            <li><a href="#" class="hover-text">안경</a></li>
+            <li><a href="#" class="hover-text">빌딩</a></li>
+            <li><a href="#" class="hover-text">아파트</a></li>
+            <li class="line-1"></li>
+
+            <li><a href="#!" class="hover-text">서비스 소개</a></li>
+            <li><a href="#!" class="hover-text">이용 약관</a></li>
+            <li><a href="#!" class="hover-text">개인정보 취급방침</a></li>
+            <li><a href="#!" class="hover-text">공지사항</a></li>
+            <li><a href="#!" class="hover-text">FAQ</a></li>
+
         </ul>
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
-
-    </div>
-    <div class="row nav-category-list">
 
     </div>
 </nav>
@@ -79,7 +107,19 @@
     <div id="index-banner" class="parallax-container">
         <div class="section no-pad-bot">
             <div class="center">
-                <!--<div class="row">ㄴㅁㄴㅇ</div>-->
+                    <div class="header-title-wrapper">
+                        <div class="title-logo-div">
+                            <!--<img src="http://www.daehac.com/_Admin_/uploadFile/University/1385467981.gif">-->
+                        </div>
+
+                        <div class="title-log-info-div">
+                            <!--<a class="hover-text" href="#"> 로그인</a>-->
+                            <button class="waves-effect waves-light btn"> 로그인</button>
+                            <button class="waves-effect waves-light btn"> 회원가입</button>
+                        </div>
+
+                    </div>
+
                 <div class="margin-b50"></div>
                 <div class="header-wrapper">
                     <div class="margin-b50"></div>
@@ -294,7 +334,7 @@
     <!--<div class="parallax-container valign-wrapper">-->
     <div class="parallax-container" id="card-box-container">
         <div class="section no-pad-bot">
-            <div class="contentContainer">
+            <div class="contentContainer" id="card-box-content-container">
                 <!--<div class="card-wrapper">-->
                 <div class="row card-wrapper">
                     <div class="cardBox">
@@ -497,8 +537,8 @@
                 통신판매업신고 : 2018-서울구로-01234호<br>
                 1234-5678 | thdrlen1@gmail.com <br>
                 MIT License<br><br>
-                <img src="https://play.google.com/intl/ko/badges/images/generic/ko_badge_web_generic.png" alt="구글플레이 이미지" title="구글플레이로 이동합니다."><br>
-                <img src="img/apple-badge-ko.png" style="padding: 0.5em 0.7em 0.5em 0.8em" alt="앱스토어 이미지" title="앱스토어로 이동합니다.">
+                <img src="https://zenkit.com/wp-content/uploads/2018/05/google-play-badge.png" alt="구글플레이 이미지" title="구글플레이로 이동합니다."><br>
+                <img class="app-store-img" src="img/apple-badge-ko.png" alt="앱스토어 이미지" title="앱스토어로 이동합니다.">
             </div>
             <div class="footer-item">
                 <h5> 카테고리</h5>
@@ -564,6 +604,7 @@
 <!--  Scripts-->
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>-->
 <script src="js/materialize.js"></script>
 <script src="js/init.js"></script>
 <script src="js/css-action.js"></script>

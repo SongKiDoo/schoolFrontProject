@@ -2,15 +2,22 @@ var module;
 (function ($) {
     $(function () {
 
-
-        var targetOjbect = $('.categoryUl').offset().top;
-        $( window ).scroll( function() {
-            if ($(document).scrollTop() > targetOjbect + 200) {
-                $('#top-nav').addClass('jbFixed');
-            } else {
-                $('#top-nav').removeClass('jbFixed');
-            }
-        });
+        var width = $(window).width();
+        // 테스트 환경이 PC인 관계로 해상도로 구분처리
+        if ((width < 1024)) {
+            $('#top-nav').addClass('jbFixed');
+        } else {
+            var targetOjbect = $('.categoryUl').offset().top;
+            $(window).scroll(function () {
+                if ($(document).scrollTop() > targetOjbect + 200) {
+                    $('#top-nav').css('display', "block");
+                    $('#top-nav').addClass('jbFixed');
+                } else {
+                    $('#top-nav').css('display', "none");
+                    $('#top-nav').removeClass('jbFixed');
+                }
+            });
+        }
 
         $('.sidenav').sidenav();
         $('.parallax').parallax();
@@ -54,14 +61,14 @@ var module;
         });
 
         // 상세카테고리 before 리스너
-        $('.fa-chevron-left').on('click', function(event){
+        $('.fa-chevron-left').on('click', function (event) {
             // 부모의 ID로 구분해 화면 이동처리
             var contextId = $(this).parent().parent().attr('id').replace('Arrow', '');
             $('#' + contextId).slick("slickPrev");
         });
 
         // 상세카테고리 after 리스너
-        $('.fa-chevron-right').on('click', function(event){
+        $('.fa-chevron-right').on('click', function (event) {
             // 부모의 ID로 구분해 화면 이동처리
             var contextId = $(this).parent().parent().attr('id').replace('Arrow', '');
             $('#' + contextId).slick("slickNext");
