@@ -42,6 +42,7 @@ p {
     line-height: 6em;
 }
 
+
 .parallax-container .section {
     width: 100%;
 }
@@ -161,6 +162,15 @@ p {
 
 footer.page-footer {
     margin: 0;
+    background-color: #ffffff;
+}
+
+.footer-copyright {
+    background-color: #F2F2F2 !important;
+}
+
+.footer-copyright span {
+    color : #6E6E6E;
 }
 
 .margin-b50 {
@@ -351,6 +361,12 @@ footer.page-footer {
     cursor: pointer;
 }
 
+.categoryWrapper ul li:hover {
+    animation-name: logo_event;
+    animation-duration:2s;
+    color: #5882FA;
+}
+
 /* 마켓 카테고리 컨텐츠 margin */
 .categoryWrapper ul li div {
     margin-bottom: 0.5em;
@@ -461,7 +477,7 @@ footer.page-footer {
     width: 100%;
     height: 20%;
     line-height: 4em;
-    background-color: #9e9e9e;
+    background-color: #5882FA;
     opacity: 0.8;
 }
 
@@ -571,3 +587,73 @@ footer.page-footer {
     display: table;
     clear: both;
 }
+
+.flew-footer {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    /*height: 100%;*/
+    /*justify-content: center;*/
+    justify-content: space-around;
+    /*flex-wrap: nowrap;*/
+    /*flex-direction: row;*/
+}
+footer {
+
+}
+
+.footer-info {
+    flex-grow: 2;
+    text-align: left;
+    color : #6E6E6E;
+    /*letter-spacing : 0.1em;*/
+
+}
+
+.footer-info img {
+    width: 180px;
+    cursor: pointer;
+}
+
+.sns-icon img{
+    width: 36px;
+    margin-right: 0.5em;
+    cursor: pointer;
+}
+
+.sns-icon img:hover{
+    animation-name: logo_event;
+    animation-duration:2s;
+}
+
+@keyframes logo_event {
+    0% {transform: translate(0);}
+    to {transform: translate(0, -10px);}
+}
+
+
+.footer-item {
+    flex-grow: 1;
+    text-align: left;
+    color : #6E6E6E;
+    line-height: 2em;
+
+}
+
+.line-1 {
+    border-top: 1px solid #E6E6E6;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
+
+.little-gray {
+    color : #D8D8D8;
+}
+
+.footer-item ul li a {
+    color : #6E6E6E;
+
+}
+
+

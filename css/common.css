@@ -1,5 +1,10 @@
 
 
 .signatureColor {
-    color: #2962FF;
+    color: #5882FA;
+}
+
+.hover-text {}
+.hover-text:hover {
+  color: #5882FA !important;
 }
