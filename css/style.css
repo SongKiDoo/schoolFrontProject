@@ -19,12 +19,6 @@ p {
     line-height: 2rem;
 }
 
-.nav-category-list {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    line-height: 6em;
-}
 
 .sidenav-trigger {
     color: #26a69a;
@@ -37,31 +31,55 @@ p {
     color: rgba(255, 255, 255, .9);
 }
 
+.radius-little {
+    border-radius: 0.4em;
+}
+
+.nav-category-list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    line-height: 6em;
+}
+
 .parallax-container .section {
     width: 100%;
 }
+
+.line-h-2 { line-height: 2}
+.line-h-3 { line-height: 3}
+.t-placeholder {color: #A4A4A4}
+.t-inputBlack { color: black }
+.t-inputWhite { color: #ffffff }
+
+/* PC */
 @media only screen and (min-width: 993px) {
     nav {
         height: 10em;
     }
 
-
     nav .brand-logo {
         display: none;
     }
 
+    /* PC 환경에서만 사용 */
     nav .pc-brand-logo {
+        height: 4em;
         display: inline-block;
         position: static;
     }
 
-}
-@media only screen and (max-width: 992px) {
-
-    nav .brand-logo {
-        display: "";
-
+    /* PC 환경에서만 사용 */
+    nav .pc-brand-logo img {
+        width: 10em;
+        vertical-align: middle;
     }
+
+
+}
+
+/* 테블릿 */
+@media only screen and (max-width: 992px) {
     .parallax-container .section {
         position: absolute;
         top: 40%;
@@ -70,17 +88,68 @@ p {
     #index-banner .section {
         top: 10%;
     }
+
+    h5 {
+        font-size: 1.7em;
+    }
+
+    nav .brand-logo {
+        display: "";
+    }
+
+    nav .brand-logo img {
+        width: 5em;
+        vertical-align: middle;
+    }
+
+    /* 메인 영역 크기 조절 */
+    .header-wrapper {
+        width: 30em !important;
+        font-size: 1.5em;
+    }
+
 }
 
+/* 모바일 */
 @media only screen and (max-width: 600px) {
     nav {
         height: 64px;
     }
 
+    h5 {
+        font-size: 2em;
+    }
+
+    .header-wrapper {
+        width: 30em !important;
+        font-size: 0.9em;
+    }
+
     #index-banner .section {
         top: 0;
     }
+
+    /* 모바일환경에서는 화살표 버튼 비노출 */
+    .dCateArrowDiv {
+        display: none;
+    }
+
+    /* 상세카테고리명 중앙 정렬 */
+    .categoryHeadName {
+        margin-top: 1em;
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 마켓 카테고리 컨텐츠 */
+    .categoryWrapper ul li {
+        width: 33% !important;
+        padding: 1em;
+    }
 }
+
+
 
 .icon-block {
     padding: 0 15px;
@@ -99,7 +168,7 @@ footer.page-footer {
 }
 
 .header-wrapper {
-    width: 650px;
+    width: 41em;
     z-index: 9;
     text-align: center;
     position: absolute;
@@ -144,48 +213,78 @@ footer.page-footer {
     height: 4em;
 }
 
-.inputNavSearchBar {
-    height: 3em;
-    display: inline-block;
-    line-height: 3em;
-}
-.inputNavSearchBar2 {
 
+/* PC 상단 검색바 */
+.inputNavSearchBar {
+    display: inline-block !important;
     width: 20em;
     height: 2em;
-    background-color: #2962FF;
+    line-height: 2em;
+    background-color: #5882FA;
     z-index: 1;
-    margin: auto;
+    /*margin: auto;*/
     vertical-align: middle;
 }
 
+/* 검색 이미지 버튼 영역  */
+.searchButton-wrapper {
+    display: inline-block;
+    float: right;
+    height: 100%;
+    width: 2em
+}
+
+/* 검색 돋보기 버튼 */
+.inputNavSearchBar .searchButton {
+    /*width: 1.3em;*/
+    /*height: 80%;*/
+    /*float: right;*/
+    display: inline-block;
+    line-height: 1;
+    text-align: center;
+    /*vertical-align: middle;*/
+    /*text-align: left;*/
+    /*color: black;*/
+    /*cursor: pointer;*/
+}
+
+
 /* 검색 텍스트 영역 */
 .textArea {
-    width: 600px;
-    /*float: left;*/
-    line-height: 3;
+    width: 92%;
     text-align: left;
-    color: black;
     padding-left: 1em;
     overflow: hidden;
     white-space: nowrap;
     /*text-overflow:ellipsis;*/
+    cursor: pointer;
 }
 
-.inputSearchBar .textArea:focus {
-    color: red;
+/* PC 상단 검색창 영역 */
+.nav-textArea {
+    float: left;
+    text-align: left;
+    padding-left: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    /*text-overflow:ellipsis;*/
+    cursor: pointer;
+    width: 85%;
+}
 
+/* 입력시 글씨색 변경 */
+.textArea:focus {
+    color: black !important;
 }
 
 /* 검색 돋보기 버튼 */
 .inputSearchBar .searchButton {
-    width: 2em;
+    width: 8%;
     float: right;
     line-height: 3;
-    text-align: left;
+    text-align: center;
     color: black;
     cursor: pointer;
-
 }
 
 /* 검색창 깜박임 처리 */
@@ -195,8 +294,8 @@ footer.page-footer {
     padding: 0;
     margin-top: 1em;
     margin-left: 2px;
-    /* 애니메이션 2.5초 반복 */
-    -webkit-animation: blink 2.5s linear infinite;
+    /* 애니메이션 1.5초 반복 */
+    -webkit-animation: blink 1.5s linear infinite;
 }
 
 @-webkit-keyframes blink {
@@ -204,7 +303,7 @@ footer.page-footer {
         background-color: #FFFFFF;
     }
     100% {
-        background-color: green;
+        background-color: #A4A4A4;
     }
 }
 
@@ -238,6 +337,7 @@ footer.page-footer {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    /*align-content: stretch;*/
 }
 
 /* 마켓 카테고리 컨텐츠 */
@@ -266,7 +366,7 @@ footer.page-footer {
 
 /* 카테고리 제목 */
 .categoryHeadName {
-    float: left;
+    float: left
 }
 
 /* 상세카테고리 화살표 영역 */
@@ -448,6 +548,7 @@ footer.page-footer {
     width: 100%;
     height: 100%;
     opacity: 0.8;
+    padding: 1em;
 }
 
 /* 카드박스 이미지 hover시 블러처리 */
@@ -458,11 +559,13 @@ footer.page-footer {
     transition-duration: 1s;
 }
 
+/* PC 환경에서 상단 탑바 고정하기 위한 클래스*/
 .jbFixed {
     position: fixed;
     top: 0px;
 }
 
+/* float 제거용 */
 .clearfix:after {
     content: "";
     display: table;

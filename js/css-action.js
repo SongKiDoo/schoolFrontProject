@@ -2,7 +2,35 @@
     var totalSecond = 0;
     var remainingIntervalFlag = false;
 
-    // 자식 아이템 hover 상단 헤더 투명도 조절
+    var textAreaFocus = false;
+    var navTextAreaFocus = false;
+
+    // 검색창 클릭시 placeholder 제거
+    $('.textArea').on('click', function () {
+        if(!textAreaFocus) $(this).html('');
+        textAreaFocus = true;
+    });
+
+    $('.nav-textArea').on('click', function () {
+        if(!navTextAreaFocus) $(this).html('');
+        navTextAreaFocus = true;
+    });
+
+
+
+    // 검색창 아웃시 내용이 없으면 placeholder 생성
+    $('.textArea').on('focusout', function () {
+        if(!$(this).html()) $(this).html('<span class="t-placeholder"> 검색어를 입력하세요.<span class="blink">&nbsp;</span></span>');
+        textAreaFocus = false;
+    });
+
+    $('.nav-textArea').on('focusout', function () {
+        // console.log($(this));
+        if(!$(this).html()) $(this).html('검색어를 입력하세요.');
+        navTextAreaFocus = false;
+    });
+
+        // 자식 아이템 hover 상단 헤더 투명도 조절
     $('.cardBoxItem').hover(function () {
         $(this).parent().parent().children('.cardBoxHead').css('opacity', 1);
     }, function () {
